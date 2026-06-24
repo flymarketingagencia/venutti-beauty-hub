@@ -177,7 +177,7 @@ function ProductPage() {
                   <div className="pb-6 text-sm leading-relaxed text-[var(--mute)]">
                     {t === "Benefícios" && (
                       <ul className="space-y-2">
-                        {product.benefits.map((b) => (
+                        {product.benefits.map((b: string) => (
                           <li key={b} className="flex items-start gap-2">
                             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--moss)]" /> {b}
                           </li>
@@ -187,7 +187,7 @@ function ProductPage() {
                     {t === "Modo de uso" && <p>{product.howTo}</p>}
                     {t === "Ativos" && (
                       <ul className="space-y-1">
-                        {product.actives.map((a) => <li key={a}>· {a}</li>)}
+                        {product.actives.map((a: string) => <li key={a}>· {a}</li>)}
                       </ul>
                     )}
                     {t === "Indicação" && <p>{product.indication}</p>}
