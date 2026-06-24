@@ -60,7 +60,7 @@ export function Hero() {
               className="absolute inset-0 h-full w-full object-cover"
               loading={idx === 0 ? "eager" : "lazy"}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30" />
+            <div className={`absolute inset-0 ${s.align === "right" ? "bg-gradient-to-l from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30" : "bg-gradient-to-r from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30"}`} />
             <div className="container-x relative flex h-full items-center">
               <div
                 className={`max-w-xl ${
