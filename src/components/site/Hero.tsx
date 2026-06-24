@@ -13,7 +13,7 @@ const slides = [
     sub: "A nova Bioplastia Capilar Venutti devolve movimento, leveza e brilho espelhado em uma única aplicação.",
     cta: "Descobrir a coleção",
     to: "/selagem",
-    align: "left" as const,
+    align: "right" as const,
   },
   {
     image: h2,
@@ -22,7 +22,7 @@ const slides = [
     sub: "Kit completo com hidratação, nutrição, reconstrução e selagem — guia incluso.",
     cta: "Conhecer o kit",
     to: "/cronograma-capilar",
-    align: "right" as const,
+    align: "left" as const,
   },
   {
     image: h3,
@@ -31,7 +31,7 @@ const slides = [
     sub: "15 anos formulando alta performance para salões. Agora, com você todos os dias.",
     cta: "Ver mais vendidos",
     to: "/mais-vendidos",
-    align: "left" as const,
+    align: "right" as const,
   },
 ];
 
@@ -60,7 +60,7 @@ export function Hero() {
               className="absolute inset-0 h-full w-full object-cover"
               loading={idx === 0 ? "eager" : "lazy"}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30" />
+            <div className={`absolute inset-0 ${s.align === "right" ? "bg-gradient-to-l from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30" : "bg-gradient-to-r from-white/85 via-white/40 to-transparent md:from-white/80 md:via-white/30"}`} />
             <div className="container-x relative flex h-full items-center">
               <div
                 className={`max-w-xl ${
