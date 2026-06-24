@@ -9,38 +9,288 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SelagemRouteImport } from './routes/selagem'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as ProdutosRouteImport } from './routes/produtos'
+import { Route as OfertasRouteImport } from './routes/ofertas'
+import { Route as MaisVendidosRouteImport } from './routes/mais-vendidos'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as FavoritosRouteImport } from './routes/favoritos'
+import { Route as CronogramaCapilarRouteImport } from './routes/cronograma-capilar'
+import { Route as CarrinhoRouteImport } from './routes/carrinho'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AreaProfissionalRouteImport } from './routes/area-profissional'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProdutoSlugRouteImport } from './routes/produto.$slug'
+import { Route as PoliticasSlugRouteImport } from './routes/politicas.$slug'
 
+const SelagemRoute = SelagemRouteImport.update({
+  id: '/selagem',
+  path: '/selagem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdutosRoute = ProdutosRouteImport.update({
+  id: '/produtos',
+  path: '/produtos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfertasRoute = OfertasRouteImport.update({
+  id: '/ofertas',
+  path: '/ofertas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaisVendidosRoute = MaisVendidosRouteImport.update({
+  id: '/mais-vendidos',
+  path: '/mais-vendidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavoritosRoute = FavoritosRouteImport.update({
+  id: '/favoritos',
+  path: '/favoritos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CronogramaCapilarRoute = CronogramaCapilarRouteImport.update({
+  id: '/cronograma-capilar',
+  path: '/cronograma-capilar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarrinhoRoute = CarrinhoRouteImport.update({
+  id: '/carrinho',
+  path: '/carrinho',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreaProfissionalRoute = AreaProfissionalRouteImport.update({
+  id: '/area-profissional',
+  path: '/area-profissional',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProdutoSlugRoute = ProdutoSlugRouteImport.update({
+  id: '/produto/$slug',
+  path: '/produto/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticasSlugRoute = PoliticasSlugRouteImport.update({
+  id: '/politicas/$slug',
+  path: '/politicas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/area-profissional': typeof AreaProfissionalRoute
+  '/blog': typeof BlogRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/cronograma-capilar': typeof CronogramaCapilarRoute
+  '/favoritos': typeof FavoritosRoute
+  '/login': typeof LoginRoute
+  '/mais-vendidos': typeof MaisVendidosRoute
+  '/ofertas': typeof OfertasRoute
+  '/produtos': typeof ProdutosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/selagem': typeof SelagemRoute
+  '/politicas/$slug': typeof PoliticasSlugRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/area-profissional': typeof AreaProfissionalRoute
+  '/blog': typeof BlogRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/cronograma-capilar': typeof CronogramaCapilarRoute
+  '/favoritos': typeof FavoritosRoute
+  '/login': typeof LoginRoute
+  '/mais-vendidos': typeof MaisVendidosRoute
+  '/ofertas': typeof OfertasRoute
+  '/produtos': typeof ProdutosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/selagem': typeof SelagemRoute
+  '/politicas/$slug': typeof PoliticasSlugRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/area-profissional': typeof AreaProfissionalRoute
+  '/blog': typeof BlogRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/cronograma-capilar': typeof CronogramaCapilarRoute
+  '/favoritos': typeof FavoritosRoute
+  '/login': typeof LoginRoute
+  '/mais-vendidos': typeof MaisVendidosRoute
+  '/ofertas': typeof OfertasRoute
+  '/produtos': typeof ProdutosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/selagem': typeof SelagemRoute
+  '/politicas/$slug': typeof PoliticasSlugRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/area-profissional'
+    | '/blog'
+    | '/carrinho'
+    | '/cronograma-capilar'
+    | '/favoritos'
+    | '/login'
+    | '/mais-vendidos'
+    | '/ofertas'
+    | '/produtos'
+    | '/quem-somos'
+    | '/selagem'
+    | '/politicas/$slug'
+    | '/produto/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/area-profissional'
+    | '/blog'
+    | '/carrinho'
+    | '/cronograma-capilar'
+    | '/favoritos'
+    | '/login'
+    | '/mais-vendidos'
+    | '/ofertas'
+    | '/produtos'
+    | '/quem-somos'
+    | '/selagem'
+    | '/politicas/$slug'
+    | '/produto/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/area-profissional'
+    | '/blog'
+    | '/carrinho'
+    | '/cronograma-capilar'
+    | '/favoritos'
+    | '/login'
+    | '/mais-vendidos'
+    | '/ofertas'
+    | '/produtos'
+    | '/quem-somos'
+    | '/selagem'
+    | '/politicas/$slug'
+    | '/produto/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreaProfissionalRoute: typeof AreaProfissionalRoute
+  BlogRoute: typeof BlogRoute
+  CarrinhoRoute: typeof CarrinhoRoute
+  CronogramaCapilarRoute: typeof CronogramaCapilarRoute
+  FavoritosRoute: typeof FavoritosRoute
+  LoginRoute: typeof LoginRoute
+  MaisVendidosRoute: typeof MaisVendidosRoute
+  OfertasRoute: typeof OfertasRoute
+  ProdutosRoute: typeof ProdutosRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  SelagemRoute: typeof SelagemRoute
+  PoliticasSlugRoute: typeof PoliticasSlugRoute
+  ProdutoSlugRoute: typeof ProdutoSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/selagem': {
+      id: '/selagem'
+      path: '/selagem'
+      fullPath: '/selagem'
+      preLoaderRoute: typeof SelagemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produtos': {
+      id: '/produtos'
+      path: '/produtos'
+      fullPath: '/produtos'
+      preLoaderRoute: typeof ProdutosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ofertas': {
+      id: '/ofertas'
+      path: '/ofertas'
+      fullPath: '/ofertas'
+      preLoaderRoute: typeof OfertasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mais-vendidos': {
+      id: '/mais-vendidos'
+      path: '/mais-vendidos'
+      fullPath: '/mais-vendidos'
+      preLoaderRoute: typeof MaisVendidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favoritos': {
+      id: '/favoritos'
+      path: '/favoritos'
+      fullPath: '/favoritos'
+      preLoaderRoute: typeof FavoritosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cronograma-capilar': {
+      id: '/cronograma-capilar'
+      path: '/cronograma-capilar'
+      fullPath: '/cronograma-capilar'
+      preLoaderRoute: typeof CronogramaCapilarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carrinho': {
+      id: '/carrinho'
+      path: '/carrinho'
+      fullPath: '/carrinho'
+      preLoaderRoute: typeof CarrinhoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/area-profissional': {
+      id: '/area-profissional'
+      path: '/area-profissional'
+      fullPath: '/area-profissional'
+      preLoaderRoute: typeof AreaProfissionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +298,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/produto/$slug': {
+      id: '/produto/$slug'
+      path: '/produto/$slug'
+      fullPath: '/produto/$slug'
+      preLoaderRoute: typeof ProdutoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politicas/$slug': {
+      id: '/politicas/$slug'
+      path: '/politicas/$slug'
+      fullPath: '/politicas/$slug'
+      preLoaderRoute: typeof PoliticasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreaProfissionalRoute: AreaProfissionalRoute,
+  BlogRoute: BlogRoute,
+  CarrinhoRoute: CarrinhoRoute,
+  CronogramaCapilarRoute: CronogramaCapilarRoute,
+  FavoritosRoute: FavoritosRoute,
+  LoginRoute: LoginRoute,
+  MaisVendidosRoute: MaisVendidosRoute,
+  OfertasRoute: OfertasRoute,
+  ProdutosRoute: ProdutosRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  SelagemRoute: SelagemRoute,
+  PoliticasSlugRoute: PoliticasSlugRoute,
+  ProdutoSlugRoute: ProdutoSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
