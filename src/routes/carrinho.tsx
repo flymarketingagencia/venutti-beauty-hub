@@ -222,6 +222,7 @@ function CheckoutPage() {
       {mobileSummary && <div className="border-b border-checkout-line bg-card px-4 py-5 lg:hidden"><OrderSummary {...{ items, total, subtotal, shippingPrice, shipping, coupon, setCoupon, couponState, applyCoupon, couponDiscount, pixDiscount, payment, updateItem }} /></div>}
 
       <main className="mx-auto grid w-full max-w-[1240px] gap-8 px-4 py-7 sm:px-6 lg:grid-cols-[minmax(0,1.42fr)_minmax(360px,0.88fr)] lg:items-start lg:px-8 lg:py-12">
+        <h1 className="sr-only">Finalizar compra</h1>
         <div className="min-w-0 space-y-5">
           <CheckoutSection number="1" title="Seus dados" subtitle="Não precisa criar conta. Leva menos de 3 minutos." open={step === 1} complete={step > 1} onEdit={() => setStep(1)} summary={form.name ? `${form.name} · ${form.email} · ${form.phone}` : ""}>
             <div className="grid gap-4 sm:grid-cols-2">
