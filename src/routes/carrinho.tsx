@@ -322,7 +322,8 @@ function Field({ id, label, value, onChange, onBlur, valid, touched, error, help
 }
 
 function SimpleField({ label, value, onChange, ...props }: { label: string; value: string; onChange: (value: string) => void } & Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange">) {
-  return <div><label className="mb-2 block text-sm font-medium">{label}</label><Input value={value} onChange={(event) => onChange(event.target.value)} className={inputClass} {...props} /></div>;
+  const id = `field-${label.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-")}`;
+  return <div><label htmlFor={id} className="mb-2 block text-sm font-medium">{label}</label><Input id={id} value={value} onChange={(event) => onChange(event.target.value)} className={inputClass} {...props} /></div>;
 }
 
 function ShippingSkeleton() { return <div className="mt-5 space-y-3" aria-label="Calculando frete"><div className="h-12 animate-pulse rounded-xl bg-checkout-soft" /><div className="h-20 animate-pulse rounded-xl bg-checkout-soft" /><div className="h-20 animate-pulse rounded-xl bg-checkout-soft" /></div>; }
