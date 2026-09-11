@@ -3,8 +3,9 @@ import p1 from "@/assets/product-1.jpg";
 import p2 from "@/assets/product-2.jpg";
 import p3 from "@/assets/product-3.jpg";
 import p4 from "@/assets/product-4.jpg";
+import type { Category } from "@/data/products";
 
-const cats = [
+const cats: { slug: Category; label: string; image: string }[] = [
   { slug: "progressivas", label: "Progressivas", image: p2 },
   { slug: "mascaras", label: "Máscaras", image: p1 },
   { slug: "home-care", label: "Home Care", image: p3 },
