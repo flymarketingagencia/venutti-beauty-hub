@@ -62,7 +62,7 @@ function FilterChip({
   active,
   children,
 }: {
-  to: string;
+  to: Category | "todos";
   active: boolean;
   children: React.ReactNode;
 }) {

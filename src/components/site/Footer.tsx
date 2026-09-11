@@ -1,5 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Lock, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import type { Category } from "@/data/products";
+
+const footerCategories: { label: string; slug: Category }[] = [
+  { label: "Home Care", slug: "home-care" },
+  { label: "Progressivas", slug: "progressivas" },
+  { label: "Máscaras", slug: "mascaras" },
+  { label: "Finalizadores", slug: "finalizadores" },
+  { label: "Cronograma", slug: "cronograma" },
+  { label: "Tratamento", slug: "tratamento" },
+];
 
 export function Footer() {
   return (
@@ -24,14 +34,7 @@ export function Footer() {
         <div>
           <p className="eyebrow mb-5">Categorias</p>
           <ul className="space-y-2 text-sm">
-            {[
-              ["Home Care", "home-care"],
-              ["Progressivas", "progressivas"],
-              ["Máscaras", "mascaras"],
-              ["Finalizadores", "finalizadores"],
-              ["Cronograma", "cronograma"],
-              ["Tratamento", "tratamento"],
-            ].map(([label, slug]) => (
+            {footerCategories.map(({ label, slug }) => (
               <li key={slug}>
                 <Link to="/produtos" search={{ cat: slug }} className="text-[var(--ink)] hover:text-[var(--moss)]">
                   {label}
