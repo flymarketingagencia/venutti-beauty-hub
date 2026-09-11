@@ -41,6 +41,18 @@
   --color-moss: var(--moss);
   --color-moss-dark: var(--moss-dark);
   --color-mute: var(--mute);
+  --color-checkout-bg: var(--checkout-bg);
+  --color-checkout-soft: var(--checkout-soft);
+  --color-checkout-offer: var(--checkout-offer);
+  --color-checkout-line: var(--checkout-line);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-star: var(--star);
+  --color-card-visual: var(--card-visual);
+  --color-card-visual-foreground: var(--card-visual-foreground);
+  --color-card-stripe: var(--card-stripe);
+  --shadow-checkout: 0 8px 30px var(--checkout-shadow);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -75,6 +87,18 @@
   --border: #e8e6e1;
   --input: #e8e6e1;
   --ring: #3f5f3f;
+  --checkout-bg: #faf8f6;
+  --checkout-soft: #f2f5f0;
+  --checkout-offer: #edf2eb;
+  --checkout-line: #e6e1dc;
+  --checkout-shadow: rgba(40, 34, 29, 0.055);
+  --success: #2e7d5b;
+  --success-foreground: #ffffff;
+  --success-soft: #e8f3ed;
+  --star: #a7833d;
+  --card-visual: #27372c;
+  --card-visual-foreground: #ffffff;
+  --card-stripe: #101612;
 }
 
 @layer base {
